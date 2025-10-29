@@ -1,0 +1,79 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+        <title>Lab Exercise 2</title>
+    </head>
+    <header>
+        <h1>Welcome to My Personal Profile Page</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a> | <a href="#about me">About</a> |
+        <a href="contact">Contact</a>
+    </nav>
+
+    <section>
+        <article>
+            <h2>Personal Information</h2>
+            <p>This is an article about personal profile information.</p>
+        </article>
+        <table border="2">
+            <tr bgcolor="lightbrown">
+                <td>Name</td>
+                <td>Age</td>
+                <td>Occupation</td>
+            </tr>
+            <tr>
+                <td>Adlynn Syakirah</td>
+                <td>20</td>
+                <td>Software Engineer</td>
+            </tr>
+            <tr>
+                <td>Fariss Firhan</td>
+                <td>23</td>
+                <td>Lawyer</td>
+            </tr>
+            <tr>
+                <td>Chong Yen</td>
+                <td>25</td>
+                <td>Enterpreneur</td>
+            </tr>
+        </table>
+        <!--registeration form-->
+        <h2>Registration Form</h2>
+        <form action="submit_form.php" method="post">
+            <!--registeration name-->
+            <label for="fname"> Name:</label><br>
+            <input type="text" id="Iname" name="lastname"><br><br>
+            <!--registeration email-->
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br><br>
+
+            <lable for="gender">Gender:</lable><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" id="female">
+            <label for="female">Female</label><br><br>
+
+            <!--checkbox for hobbies-->
+            <form action="submit_form.php" method="post">
+                <label for="hobby">Select your favorite hobbies:</label><br>
+                <input type="checkbox" id="hobby1" name="hobby1" value="Watching Movie">
+                <label for="hobby1">Watching Movie</label><br>
+                <input type="checkbox" id="hobby2" name="hobby2" value="Gaming">
+                <label for="hobby2">Gaming</label><br>
+                <input type="checkbox" id="hobby3" name="hobby3" value="Cooking">
+                <label for="hobby2">Cooking</label><br><br>
+
+                <input type="submit" value="Submit">
+    </section>
+
+    <footer>
+        <p>Copyright©2025 Adlynn Syakirah</p>
+    </footer>  
+
+     </html>
+     
