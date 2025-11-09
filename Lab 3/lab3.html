@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PizzaPal Order Page</title>
+</head>
+
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; height:100vh; display:flex; flex-direction:column;">
+
+  <!-- Header Section -->
+  <div id="header" 
+       style="background-color:rgb(223,112,75); color:white; height:70px; text-align:center; ">
+    <h1>Welcome to PizzaPal !!</h1> 
+  </div>
+
+  <!-- Main Content Section-->
+  <div id="content" 
+       style="background-color:rgb(255,245,230); flex:1; display:flex; justify-content:center; text-align:center;">
+
+    <form style="text-align:center;">
+      <h2 style="color:rgb(223,112,75); margin-bottom:10px;">Order Your Pizza</h2>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Pizza Option:</b></label><br>
+        <input type="checkbox" id="Margherita" name="pizza" value="Margherita">
+        <label for="Margherita">Margherita</label>
+        <input type="checkbox" id="Pepperoni" name="pizza" value="Pepperoni">
+        <label for="Pepperoni">Pepperoni</label>
+        <input type="checkbox" id="Hawaiian" name="pizza" value="Hawaiian">
+        <label for="Hawaiian">Hawaiian</label>
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Cheese Level:</b></label><br>
+        <input type="range" id="cheese" min="0" max="10" value="5" oninput="level.value = cheese.value" style="width:60%;">
+        <output id="level">5</output>
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Preferred Date:</b></label><br>
+        <input type="date" required style="width:60%; padding:4px;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Order Type:</b></label><br>
+        <input type="radio" name="order" value="pickup"> Pickup
+        <input type="radio" name="order" value="delivery"> Delivery
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Email:</b></label><br>
+        <input type="email" placeholder="example@gmail.com" required style="width:60%;">
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <label><b>Contact Number:</b></label><br>
+        <input type="tel" placeholder="e.g. 011-39113616" required style="width:60%;">
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <label><b>Address (for delivery):</b></label><br>
+        <textarea rows="2" cols="25" placeholder="Enter address here" style="width:60%; resize:none;"></textarea>
+      </div>
+
+      <input type="submit" value="Submit Order" 
+             style="background-color:rgb(223,112,75); padding:8px 16px; border:none; border-radius:5px; cursor:pointer;">
+    </form>
+  </div>
+
+  <!-- Footer Section-->
+  <div id="footer" 
+       style="background-color:rgb(208,125,225); height:45px; text-align:center; line-height:45px; font-size:14px;">
+    &copy; 2025 PizzaPal | Contact: 011-39113616 | pizzapal@gmail.com
+  </div>
+
+</body>
+</html>
