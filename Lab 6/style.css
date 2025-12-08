@@ -1,0 +1,215 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50; 
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Section Container */
+#quiz {
+    background-color: white;
+    padding: 40px;
+    margin: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 700px;
+}
+
+/* Start Screen */
+#start-screen, #results-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+#start-screen h2, #results-screen h2 {
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+/* Question Styling */
+#question-container {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00796b; 
+    min-height: 50px;
+}
+
+/* Options Grid */
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Option Buttons */
+.option-btn {
+    background-color: #f1f8e9; 
+    border: 2px solid #8bc34a; 
+    padding: 15px 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: left;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #c8e6c9; 
+    transform: translateY(-2px);
+}
+
+/* Option States */
+.option-btn.selected {
+    border-color: #ff9800; 
+    background-color: #fff3e0;
+    font-weight: bold;
+}
+
+.option-btn.correct {
+    background-color: #4CAF50 !important; 
+    border-color: #388e3c;
+    color: white;
+}
+
+.option-btn.incorrect {
+    background-color: #f44336 !important; 
+    border-color: #d32f2f;
+    color: white;
+}
+
+/* Timer and Feedback */
+#timer {
+    text-align: right;
+    font-weight: bold;
+    color: #ff5722; 
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#feedback {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    min-height: 30px;
+}
+
+/* Action Buttons */
+#start-btn, #next-btn, #restart-btn {
+    background-color: #00bcd4; 
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+#start-btn:hover, #next-btn:hover:not(:disabled), #restart-btn:hover {
+    background-color: #0097a7;
+}
+
+#next-btn:disabled {
+    background-color: #b2ebf2;
+    cursor: not-allowed;
+}
+
+/* Footer (Score) */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    background-color: #388e3c; 
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    #quiz {
+        padding: 25px 15px;
+        margin: 15px;
+    }
+    #options-container {
+        grid-template-columns: 1fr; 
+    }
+}
+/* Footer (Score) Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* New: Styling for the results screen pop-up area */
+#results-screen {
+    padding: 20px;
+    background-color: #f7fff7; 
+    color: #333;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#results-screen h2 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+#final-score {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Action Buttons */
+#next-btn, #restart-btn {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block; 
+    width: 100%;
+    margin-top: 10px; 
+    transition: background-color 0.2s;
+}
+
+#restart-btn:hover {
+    background-color: #0097a7; 
+}
+
