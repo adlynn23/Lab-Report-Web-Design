@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia | Travel Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="side-nav">
+        <div class="nav-links">
+            <a href="#home"><i class="fa fa-home"></i> Home</a>
+            <a href="#login"><i class="fa fa-sign-in"></i> Login</a>
+            <a href="#gallery"><i class="fa fa-image"></i> Gallery</a>
+            <a href="#places"><i class="fa fa-place"></i> Best Place</a>
+            <a href="#progress"><i class="fa fa-map-marker"></i> Progress</a>
+            <a href="#profile"><i class="fa fa-users"></i> Guides</a>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <section id="home" class="hero">
+            <img src="background-image.jpg" alt="Beautiful Scenery" class="hero-img">
+            <div class="overlay-text">
+                <h1>Explore Malaysia</h1>
+                <p>Your journey begins here</p>
+            </div>
+        </section>
+
+        <section id="login" class="section-container form-section">
+            <div class="image-container">
+                <img src="imglogin.jpg" alt="Login Background">
+                <div class="form-container">
+                    <h2>Welcome Back</h2>
+                    <form action="#" method="post">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="slideshow-container">
+                <div class="slide fade"><img src="img1.jpeg" alt="Destination 1"></div>
+                <div class="slide fade"><img src="img2.jpg" alt="Destination 2"></div>
+                <div class="slide fade"><img src="img3.jpg" alt="Destination 3"></div>
+                <div class="slide fade"><img src="img4.jpg" alt="Destination 2"></div>
+                <div class="slide fade"><img src="img8.jpg" alt="Destination 3"></div>
+            </div>
+        </section>
+
+        <section id="places" class="collapsible-section">
+            <h2>Best Vacation Places in Malaysia</h2>
+
+            <button class="collapsible">Terengganu <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Pulau Redang</li>
+                    <li>Pulau Perhentian</li>
+                    <li>Masjid Kristal</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Penang <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>George Town</li>
+                    <li>Batu Ferringhi</li>
+                    <li>Penang Hill</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Sabah <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Mount Kinabalu</li>
+                    <li>Sipadan Island</li>
+                    <li>Kota Kinabalu Waterfront</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Pahang <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Cameron Highlands (Tea Plantations)</li>
+                    <li>Genting Highlands (Theme Parks)</li>
+                    <li>Taman Negara (Ancient Rainforest)</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Sarawak <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Mulu Caves (UNESCO World Heritage)</li>
+                    <li>Kuching Waterfront</li>
+                    <li>Bako National Park</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Langkawi <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Langkawi Sky Bridge</li>
+                    <li>Eagle Square (Dataran Lang)</li>
+                    <li>Underwater World Langkawi</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Kuala Lumpur <i class="fa fa-chevron-down"></i></button>
+            <div class="collapse-content">
+                <ul>
+                    <li>Petronas Twin Towers (KLCC)</li>
+                    <li>Batu Caves</li>
+                    <li>Bukit Bintang Shopping District</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="progress" class="section-container gray-bg">
+            <h2 class="section-title">States Visited</h2>
+            <p>Select the states you have visited</p>
+            <div class="state-list">
+                <label class="checkbox-label"><input type="checkbox" class="state"> Terengganu</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Kelantan</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Pahang</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Selangor</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Penang</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Melaka</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Kedah</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Perak</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Johor</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Negeri Sembilan</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Perlis</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Sabah</label>
+                <label class="checkbox-label"><input type="checkbox" class="state"> Sarawak</label>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0 / 5 states visited</p>
+            </div>
+        </section>
+
+        <section id="profile" class="section-container">
+            <h2 class="section-title">Recommended Travel Guides</h2>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="https://picsum.photos/120?1" alt="Guide 1">
+                    <h3>Aina Hassan</h3>
+                    <p>Island & Beach Tours</p>
+                    <a href="#" class="contact-btn">Contact</a>
+                </div>
+                <div class="profile-card">
+                    <img src="https://picsum.photos/120?2" alt="Guide 2">
+                    <h3>Daniel Lee</h3>
+                    <p>City & Cultural Trips</p>
+                    <a href="#" class="contact-btn">Contact</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
