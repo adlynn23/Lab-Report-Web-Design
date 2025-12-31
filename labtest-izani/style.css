@@ -1,0 +1,12 @@
+.hero{
+    /* height: 150px;   */
+    background-position: center;
+    position: relative;
+    background-image: url(technolgy.jpg);
+}
+
+.overlay {
+    background-color: rgba(17, 1, 1, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+} 
