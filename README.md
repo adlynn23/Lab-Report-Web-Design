@@ -1,39 +1,62 @@
-# 
-HTTP Status 500 – Internal Server Error
-Type Exception Report
+<%-- 
+    Document   : schedule
+    Created on : 16 Jun 2026, 3:17:12 PM
+    Author     : MP2-4
+--%>
 
-Message Unable to compile class for JSP:
+<%@page import="java.util.List"%>
+<%@page import="com.Model.SessionBean"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <%@ include file="header.html" %>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a href="" class="navbar-brand">DRVIESMART INTGRATED ACADEMY</a>
+            </nav>
+        </header>
+        <br>
+        <div class="row">
+            <div class="container">
+                <h3 class="text-center">Schedule</h3>
+                <hr>
+                <div class="container text-left">
+                    <a href="<%=request.getContextPath()%>/new" class="btn btn-primary">Add New Schedule</a>
+                </div>
+                <br>
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Student Name</th>
+                            <th>Branch Location</th>
+                            <th>Lesson Type</th>
+                            <th>Status</th>
 
-Description The server encountered an unexpected condition that prevented it from fulfilling the request.
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                            List<SessionBean> list= (List<SessionBean>) request.getAttribute("sessionList");
 
-Exception
+                            for (SessionBean s : list) {
+                        %>
 
-org.apache.jasper.JasperException: Unable to compile class for JSP: 
+                        <tr>
+                            <td><%= s.getSession_id()%></td>
+                            <td><%= s.getStudent_name()%></td>
+                            <td><%= s.getBranch_location()%></td>
+                            <td><%= s.getLesson_type()%></td>
+                            <td><%= s.getStatus()%></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                </body>
 
-An error occurred at line: [226] in the generated java file: [C:\xampp\tomcat\work\Catalina\localhost\LabTestS76245\org\apache\jsp\schedule_jsp.java]
-Syntax error, insert "}" to complete Block
-
-An error occurred at line: [243] in the generated java file: [C:\xampp\tomcat\work\Catalina\localhost\LabTestS76245\org\apache\jsp\schedule_jsp.java]
-Syntax error on token "}", delete this token
-
-An error occurred at line: [244] in the generated java file: [C:\xampp\tomcat\work\Catalina\localhost\LabTestS76245\org\apache\jsp\schedule_jsp.java]
-Syntax error, insert "}" to complete ClassBody
-
-Stacktrace:
-	org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
-	org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
-	org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
-	org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
-	org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
-	org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
-	org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
-	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
-	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
-	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	com.WEB.ScheduleServlet.doGet(ScheduleServlet.java:38)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:489)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-Note The full stack trace of the root cause is available in the server logs.
+               <%@ include file="footer.jsp" %>
+                </html>
